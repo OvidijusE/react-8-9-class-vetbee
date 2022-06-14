@@ -1,9 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
-
-import MedicationsPage from './pages/MedicationsPage';
-import PetsPage from './pages/PetsPage';
+import MedicationsPage from './pages/MedicationsPage/MedicationsPage';
+import PetsPage from './pages/PetsPage/PetsPage';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         <Route path='/medications'>
           <MedicationsPage />
         </Route>
-        <Route path='/'>
+        <Route exact path='/'>
           <PetsPage />
         </Route>
       </Switch>
