@@ -2,6 +2,7 @@ import css from './PetsPage.module.css';
 
 import { useState, useEffect } from 'react';
 import PetCard from '../../components/PetCard/PetCard';
+import ViewLogButton from '../../UI/ViewLogButton/ViewLogButton';
 
 const PetsPage = () => {
   const [petsArr, setPetsArr] = useState([]);
@@ -15,7 +16,10 @@ const PetsPage = () => {
   }, []);
   return (
     <div>
-      <h1>Pets Page</h1>
+      <div className='page-title'>
+        <h1>Pets Page</h1>
+        <ViewLogButton>Add Pet</ViewLogButton>
+      </div>
       <div className={css['pets-cards-grid']}>
         {petsArr.map((pObj) => (
           <PetCard key={pObj.id} {...pObj} />

@@ -8,7 +8,7 @@ function Header() {
       <div className={css['header-container']}>
         <img className={css['vet-bee-logo']} src='assets/vet-bee-logo.png' alt='' />
         <nav className={css['main-nav']}>
-          <Link className={css['nav-item']} exact to='/'>
+          <Link className={css['nav-item']} to='/'>
             Pets
           </Link>
           <Link className={css['nav-item']} to='/medications'>

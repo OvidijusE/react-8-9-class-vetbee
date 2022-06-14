@@ -1,4 +1,6 @@
-import Button from '../../UI/Button';
+import DeleteButton from '../../UI/DeleteButton/DeleteButton';
+import ViewLogButton from '../../UI/ViewLogButton/ViewLogButton';
+
 import css from './PetCard.module.css';
 
 const PetCard = (props) => {
@@ -8,8 +10,8 @@ const PetCard = (props) => {
       <p>{props.dob}</p>
       <p>{props.client_email}</p>
       <div className='buttons'>
-        <Button>VIEW LOG</Button>
-        <Button>DELETE</Button>
+        <ViewLogButton>VIEW LOG</ViewLogButton>
+        <DeleteButton>DELETE</DeleteButton>
       </div>
     </div>
   );
