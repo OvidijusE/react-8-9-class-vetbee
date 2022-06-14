@@ -1,0 +1,19 @@
+:root {
+  --orange: rgb(253, 126, 13);
+  --light-grey: rgb(230, 228, 228);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(125, 130, 133);
+}
+
+body {
+  margin-top: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.App {
+  max-width: 80rem;
+  margin: 0 auto;
+}
