@@ -1,4 +1,4 @@
-.add-pet-form {
+.add-meds-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -9,7 +9,7 @@
   border-radius: 0.3rem;
 }
 
-.add-pet-form input {
+.add-meds-form input {
   width: 100%;
   margin-bottom: 0.2rem;
 }

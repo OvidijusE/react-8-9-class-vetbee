@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import ViewLogButton from '../../UI/ViewLogButton/ViewLogButton';
 import Button from '../../UI/Button';
 import MedCard from '../../components/MedCard/MedCard';
+import { Link } from 'react-router-dom';
 
 const MedicationsPage = () => {
   const [medsArr, setMedsArr] = useState([]);
@@ -23,7 +24,9 @@ const MedicationsPage = () => {
         <h1>Medications Page</h1>
         {/* <ViewLogButton>Add Pet</ViewLogButton> */}
         {/* <Button className={css['orange-button']}>Add Pet</Button> */}
-        <Button orange>Add Medication</Button>
+        <Link to='/AddMedsPage'>
+          <Button orange>Add Medication</Button>
+        </Link>
       </div>
       <div className={css['medications-cards-grid']}>
         {medsArr.map((mObj) => (
