@@ -21,7 +21,7 @@ const PetsPage = () => {
       <div className={css['page-title']}>
         <h1>Pets Page</h1>
         <Link to='/AddPetsPage'>
-          <Button main>Add Pet</Button>
+          <Button main>ADD PET</Button>
         </Link>
       </div>
       <div className={css['pets-cards-grid']}>

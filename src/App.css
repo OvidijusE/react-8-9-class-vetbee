@@ -6,7 +6,9 @@
 }
 
 body {
-  margin-top: 0.5em;
+  max-width: 80rem;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img {
@@ -14,6 +16,5 @@ img {
 }
 
 .App {
-  max-width: 80rem;
-  margin: 0 auto;
+  margin-top: 0.5em;
 }
