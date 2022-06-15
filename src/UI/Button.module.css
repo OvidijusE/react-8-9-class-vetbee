@@ -9,7 +9,7 @@
 
 .secondary {
   margin: 0.2rem;
-  border: 1px solid var(--orange);
+  border: 0.01rem solid var(--orange);
   color: var(--orange);
   background-color: var(--white);
   border-radius: 0.2rem;
