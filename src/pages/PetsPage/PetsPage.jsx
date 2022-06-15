@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 const PetsPage = () => {
   const [petsArr, setPetsArr] = useState([]);
   const getPets = async () => {
-    // const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/pets/');
-    const resp = await fetch('db/pets.json');
+    const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/pets/');
+    // const resp = await fetch('db/pets.json');
     const dataInJs = await resp.json();
     setPetsArr(dataInJs);
   };
