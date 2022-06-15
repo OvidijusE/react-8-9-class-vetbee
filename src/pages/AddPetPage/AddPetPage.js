@@ -58,6 +58,11 @@ const AddPetPage = () => {
       });
       const dataInJs = await resp.json();
       console.log('dataInJs ===', dataInJs);
+      if (dataInJs.changes === 1) {
+        window.location.href = '/';
+      } else {
+        console.error('cannot create pet');
+      }
     }
     postPets();
 

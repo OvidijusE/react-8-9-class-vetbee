@@ -5,14 +5,20 @@ import PetCard from '../../components/PetCard/PetCard';
 import Button from '../../UI/Button';
 import { Link } from 'react-router-dom';
 
-const PetsPage = () => {
+const PetsPage = (props) => {
   const [petsArr, setPetsArr] = useState([]);
+
   const getPets = async () => {
     const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/pets/');
     // const resp = await fetch('db/pets.json');
     const dataInJs = await resp.json();
     setPetsArr(dataInJs);
   };
+  function handleDelete(deleteId) {
+    console.log('click');
+    const filtered = petsArr.filter((pObj) => pObj.id !== deleteId);
+    setPetsArr(filtered);
+  }
   useEffect(() => {
     getPets();
   }, []);
@@ -26,7 +32,7 @@ const PetsPage = () => {
       </div>
       <div className={css['pets-cards-grid']}>
         {petsArr.map((pObj) => (
-          <PetCard key={pObj.id} {...pObj} />
+          <PetCard onDelete={handleDelete} key={pObj.id} {...pObj} />
         ))}
       </div>
     </div>
