@@ -1,0 +1,17 @@
+.orange {
+  margin: 0.2rem;
+  background-color: var(--orange);
+  color: var(--white);
+  border: 0;
+  border-radius: 0.2rem;
+  padding: 0.7rem 2rem;
+}
+
+.white-button {
+  margin: 0.2rem;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  background-color: var(--white);
+  border-radius: 0.2rem;
+  padding: 0.7rem 2rem;
+}

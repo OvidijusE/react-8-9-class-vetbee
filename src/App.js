@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import AddPetPage from './pages/AddPetPage/AddPetPage';
 import MedicationsPage from './pages/MedicationsPage/MedicationsPage';
 import PetsPage from './pages/PetsPage/PetsPage';
 
@@ -9,6 +10,9 @@ function App() {
     <div className='App'>
       <Header />
       <Switch>
+        <Route path='/AddPetsPage'>
+          <AddPetPage />
+        </Route>
         <Route path='/medications'>
           <MedicationsPage />
         </Route>
