@@ -1,4 +1,4 @@
-.orange {
+.main {
   margin: 0.2rem;
   background-color: var(--orange);
   color: var(--white);
@@ -7,7 +7,7 @@
   padding: 0.7rem 2rem;
 }
 
-.white-button {
+.secondary {
   margin: 0.2rem;
   border: 1px solid var(--orange);
   color: var(--orange);

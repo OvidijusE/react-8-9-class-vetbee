@@ -2,7 +2,6 @@ import css from './PetsPage.module.css';
 
 import { useState, useEffect } from 'react';
 import PetCard from '../../components/PetCard/PetCard';
-import ViewLogButton from '../../UI/ViewLogButton/ViewLogButton';
 import Button from '../../UI/Button';
 import { Link } from 'react-router-dom';
 

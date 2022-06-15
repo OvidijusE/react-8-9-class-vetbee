@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import DeleteButton from '../../UI/DeleteButton/DeleteButton';
-import ViewLogButton from '../../UI/ViewLogButton/ViewLogButton';
+import Button from '../../UI/Button';
 import css from './AddMedsPage.module.css';
 
 const AddMedsPage = () => {
@@ -14,9 +13,9 @@ const AddMedsPage = () => {
         <label htmlFor='description'>Enter description: </label>
         <input type='text' name='' id='description' />
         <div className={css['buttons']}>
-          <ViewLogButton>Send</ViewLogButton>
+          <Button main>Send</Button>
           <Link to='/'>
-            <DeleteButton>Go Back</DeleteButton>
+            <Button secondary>Go Back</Button>
           </Link>
         </div>
       </form>
