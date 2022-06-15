@@ -11,7 +11,7 @@ const AddPetPage = () => {
         <label htmlFor='name'>Enter name</label>
         <input type='text' name='' id='name' />
         <label htmlFor='dob'>Enter date of birth: </label>
-        <input type='number' name='' id='dob' />
+        <input type='date' name='' id='dob' />
         <label htmlFor='email'>Enter email: </label>
         <input type='email' name='' id='email' />
         <div className={css['buttons']}>

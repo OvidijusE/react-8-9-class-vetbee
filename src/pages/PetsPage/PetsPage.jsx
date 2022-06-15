@@ -20,10 +20,8 @@ const PetsPage = () => {
     <div>
       <div className={css['page-title']}>
         <h1>Pets Page</h1>
-        {/* <ViewLogButton>Add Pet</ViewLogButton> */}
-        {/* <Button className={css['orange-button']}>Add Pet</Button> */}
         <Link to='/AddPetsPage'>
-          <Button orange>Add Pet</Button>
+          <Button main>Add Pet</Button>
         </Link>
       </div>
       <div className={css['pets-cards-grid']}>

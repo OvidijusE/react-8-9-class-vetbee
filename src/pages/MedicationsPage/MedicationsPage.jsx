@@ -21,8 +21,6 @@ const MedicationsPage = () => {
     <div>
       <div className={css['page-title']}>
         <h1>Medications Page</h1>
-        {/* <ViewLogButton>Add Pet</ViewLogButton> */}
-        {/* <Button className={css['orange-button']}>Add Pet</Button> */}
         <Link to='/AddMedsPage'>
           <Button main>Add Medication</Button>
         </Link>
