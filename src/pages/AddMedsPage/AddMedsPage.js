@@ -31,7 +31,7 @@ const AddMedsPage = () => {
         />
         <div className={css['buttons']}>
           <Button main>Send</Button>
-          <Link to='/'>
+          <Link to='/medications'>
             <Button secondary>Go Back</Button>
           </Link>
         </div>

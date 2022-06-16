@@ -8,11 +8,19 @@ import { Link } from 'react-router-dom';
 
 const MedicationsPage = () => {
   const [medsArr, setMedsArr] = useState([]);
+
   const getMeds = async () => {
     const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/meds/');
     // const resp = await fetch('db/medications.json');
     const dataInJs = await resp.json();
     setMedsArr(dataInJs);
+  };
+  const deleteMeds = async (id) => {
+    const resp = await fetch(`https://glittery-dull-snickerdoodle.glitch.me/v1/meds/${id}`, {
+      method: 'DELETE',
+    });
+    console.log('resp ===', resp);
+    getMeds();
   };
   useEffect(() => {
     getMeds();
@@ -27,7 +35,7 @@ const MedicationsPage = () => {
       </div>
       <div className={css['medications-cards-grid']}>
         {medsArr.map((mObj) => (
-          <MedCard key={mObj.id} {...mObj} />
+          <MedCard onDelete={deleteMeds} key={mObj.id} {...mObj} />
         ))}
       </div>
     </div>

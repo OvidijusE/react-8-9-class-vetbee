@@ -4,7 +4,7 @@ import PetCard from '../../components/PetCard/PetCard';
 import Button from '../../UI/Button';
 import { Link } from 'react-router-dom';
 
-const PetsPage = (props) => {
+const PetsPage = () => {
   const [petsArr, setPetsArr] = useState([]);
 
   // function handleDelete(deleteId) {
