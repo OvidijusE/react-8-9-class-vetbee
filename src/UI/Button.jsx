@@ -2,7 +2,7 @@ import css from './Button.module.css';
 
 const Button = (props) => {
   return (
-    <button className={props.secondary === true ? css.secondary : css.main}>
+    <button onClick={props.onClick} className={props.secondary === true ? css.secondary : css.main}>
       {props.children}
     </button>
   );

@@ -1,5 +1,4 @@
 import css from './PetsPage.module.css';
-
 import { useState, useEffect } from 'react';
 import PetCard from '../../components/PetCard/PetCard';
 import Button from '../../UI/Button';
@@ -8,17 +7,27 @@ import { Link } from 'react-router-dom';
 const PetsPage = (props) => {
   const [petsArr, setPetsArr] = useState([]);
 
+  // function handleDelete(deleteId) {
+  //   const filtered = petsArr.filter((pObj) => pObj.id !== deleteId);
+  //   console.log('filtered ===', filtered);
+  //   setPetsArr(filtered);
+  // }
+
   const getPets = async () => {
     const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/pets/');
     // const resp = await fetch('db/pets.json');
     const dataInJs = await resp.json();
     setPetsArr(dataInJs);
   };
-  function handleDelete(deleteId) {
-    console.log('click');
-    const filtered = petsArr.filter((pObj) => pObj.id !== deleteId);
-    setPetsArr(filtered);
-  }
+
+  const deletePets = async (id) => {
+    console.log('bandziau istrinti elementa su id', id);
+    const resp = await fetch(`https://glittery-dull-snickerdoodle.glitch.me/v1/pets/${id}`, {
+      method: 'DELETE',
+    });
+    console.log('resp ===', resp);
+    getPets();
+  };
   useEffect(() => {
     getPets();
   }, []);
@@ -32,7 +41,7 @@ const PetsPage = (props) => {
       </div>
       <div className={css['pets-cards-grid']}>
         {petsArr.map((pObj) => (
-          <PetCard onDelete={handleDelete} key={pObj.id} {...pObj} />
+          <PetCard onDelete={deletePets} key={pObj.id} {...pObj} />
         ))}
       </div>
     </div>

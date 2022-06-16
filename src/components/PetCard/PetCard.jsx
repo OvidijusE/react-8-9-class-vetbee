@@ -1,9 +1,14 @@
-import { useState } from 'react';
 import Button from '../../UI/Button';
 import css from './PetCard.module.css';
 
-const PetCard = (props, onDelete) => {
-  // const [petsArr, setPetsArr] = useState;
+const PetCard = (props) => {
+  // function handleDelete(deleteId) {
+  //   console.log('click', deleteId);
+  //   // const filtered = petsArr.filter((pObj) => pObj.id !== deleteId);
+  //   const filtered = petsArr.id;
+  //   console.log('filtered ===', filtered);
+  //   setPetsArr(filtered);
+  // }
 
   return (
     <div className={css['pet-card']}>
@@ -12,11 +17,15 @@ const PetCard = (props, onDelete) => {
       <p>{props.client_email}</p>
       <div className='buttons'>
         <Button main>VIEW LOG</Button>
-        <Button onDelete={props.onDelete} secondary>
+        {/* <Button onClick={() => onDelete(id)} secondary>
+          DELETE
+        </Button> */}
+        <Button onClick={() => props.onDelete(props.id)} secondary>
           DELETE
         </Button>
       </div>
     </div>
   );
 };
+
 export default PetCard;
