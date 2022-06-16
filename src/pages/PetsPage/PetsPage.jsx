@@ -39,6 +39,7 @@ const PetsPage = () => {
         </Link>
       </div>
       <div className={css['pets-cards-grid']}>
+        {petsArr.length === 0 && <h2>Loading Pets ... 🐶🐱🐰</h2>}
         {petsArr.map((pObj) => (
           <PetCard onDelete={deletePets} key={pObj.id} {...pObj} />
         ))}

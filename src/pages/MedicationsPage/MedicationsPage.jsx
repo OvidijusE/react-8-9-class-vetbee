@@ -34,6 +34,7 @@ const MedicationsPage = () => {
         </Link>
       </div>
       <div className={css['medications-cards-grid']}>
+        {medsArr.length === 0 && <h2>Loading Meds ... 👨‍⚕️💊</h2>}
         {medsArr.map((mObj) => (
           <MedCard onDelete={deleteMeds} key={mObj.id} {...mObj} />
         ))}

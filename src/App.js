@@ -6,12 +6,16 @@ import AddMedsPage from './pages/AddMedsPage/AddMedsPage';
 import AddPetPage from './pages/AddPetPage/AddPetPage';
 import MedicationsPage from './pages/MedicationsPage/MedicationsPage';
 import PetsPage from './pages/PetsPage/PetsPage';
+import ViewLogsPage from './pages/ViewLogsPage/ViewLogsPage';
 
 function App() {
   return (
     <div className='App'>
       <Header />
       <Switch>
+        <Route path='/ViewLogsPage'>
+          <ViewLogsPage />
+        </Route>
         <Route path='/AddMedsPage'>
           <AddMedsPage />
         </Route>
