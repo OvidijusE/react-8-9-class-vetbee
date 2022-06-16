@@ -21,7 +21,6 @@ const PetsPage = (props) => {
   };
 
   const deletePets = async (id) => {
-    console.log('bandziau istrinti elementa su id', id);
     const resp = await fetch(`https://glittery-dull-snickerdoodle.glitch.me/v1/pets/${id}`, {
       method: 'DELETE',
     });

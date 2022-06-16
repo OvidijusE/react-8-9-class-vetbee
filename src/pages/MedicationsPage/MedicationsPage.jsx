@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 const MedicationsPage = () => {
   const [medsArr, setMedsArr] = useState([]);
   const getMeds = async () => {
-    // const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/meds/');
-    const resp = await fetch('db/medications.json');
+    const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/meds/');
+    // const resp = await fetch('db/medications.json');
     const dataInJs = await resp.json();
     setMedsArr(dataInJs);
   };
