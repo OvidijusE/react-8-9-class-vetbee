@@ -25,3 +25,11 @@
   margin-right: -20rem;
   margin-top: 0.3rem;
 }
+
+.night {
+  background-color: black;
+}
+
+.day {
+  background-color: white;
+}
