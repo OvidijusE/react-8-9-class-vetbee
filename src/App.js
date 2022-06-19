@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer/Footer';
@@ -11,19 +11,33 @@ import PetsPage from './pages/PetsPage/PetsPage';
 import ViewLogsPage from './pages/ViewLogsPage/ViewLogsPage';
 
 function App() {
-  const [nightMode, setNightMode] = useState(false);
+  const initialState = { darkMode: false };
 
-  function nightTheme() {
-    setNightMode(true);
+  function themeReducer(state, action) {
+    switch (action.type) {
+      case 'LIGHTMODE':
+        return { darkMode: false };
+      case 'DARKMODE':
+        return { darkMode: true };
+      default:
+        return state;
+    }
   }
 
-  const ctx = {
-    nightTheme,
-    nightMode,
-  };
+  const [state, dispatch] = useReducer(themeReducer, initialState);
+
+  function ThemeProvider(props) {
+    const [state, dispatch] = useReducer(themeReducer, initialState);
+
+    return (
+      <ThemeContext.Provider value={{ state: state, dispatch: dispatch }}>
+        {props.children}
+      </ThemeContext.Provider>
+    );
+  }
 
   return (
-    <ThemeContext.Provider value={ctx}>
+    <ThemeProvider>
       <div className='App'>
         <Header />
         <Switch>
@@ -45,7 +59,7 @@ function App() {
         </Switch>
         <Footer />
       </div>
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }
 
